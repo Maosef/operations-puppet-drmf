@@ -20,7 +20,7 @@ This role requires a vagrant or labs-vagrant instance.
 
 2. Select the version with 2 CPUs and assign a name that begins with drmf.
 
-3. Wait until the instance status is "ACTIVE" and puppet status is "OK". Now, click on configure and enable the puppet role `role::labs::mediawiki_vagrant`.
+3. Wait until the instance status is "ACTIVE" and puppet status is "OK". Now, click on configure and enable the puppet roles `role::labs::mediawiki_vagrant` and `role::labs::lvm::srv`.
 
 4. Log into the instance and force a puppet and labs vagrant run via
  ```
