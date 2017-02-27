@@ -68,7 +68,7 @@ function wfOnMathFormulaRendered( Parser $parser, MathRenderer $renderer, &$Resu
     $id = $renderer->getID();
     if ( $id ) {
         $url = Title::newFromText( \'Formula:\' . $id )->getLocalURL();
-        $Result = preg_replace ("#</semantics>#", "<annotation encoding=\"OpenMath\" >" . $renderer->getUserInputTex() . "</annotation>\n</semantics>", $Result );
+        $Result = preg_replace ("#</semantics>#", "<annotation encoding=\"LaTeX\" >" . $renderer->getUserInputTex() . "</annotation>\n</semantics>", $Result );
         $Result = \'<a href="\' . $url . \'" id="\' . $id . \'" style="color:inherit;">\' . $Result . \'</a>\';
     }
     return true;
